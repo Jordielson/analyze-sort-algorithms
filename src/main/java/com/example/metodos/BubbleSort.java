@@ -9,7 +9,7 @@ public class BubbleSort extends Ordenacao {
 			for(int j = 0; j < v.length - 1 - i; j++) {
 				comparacaoDeChaves++;
 				if(v[j] > v[j + 1]) {
-					movimentacaoDeRegistro++;
+					movimentacaoDeRegistro+=2;
 					int aux = v[j];
 					v[j] = v[j + 1];
 					v[j + 1] = aux;
@@ -29,21 +29,27 @@ public class BubbleSort extends Ordenacao {
 				 qtdOperacao += 3;
 			}
 			
-			if(estaOrdenado) {   	  
-				break;
-			}
 			/** Operacoes:
-				incremento da variavel i
-				comparacao do laco for com variavel i
-				inicializacao da variavel estaOrdenado
+				mudanca da variavel estaOrdenado
 				inicializacao da variavel j
 				ultima comparacao do laco for com varial j
 				verificacao se a lista esta ordenada
 			 */
-			qtdOperacao += 5;
+			qtdOperacao += 4;
+			if(estaOrdenado) {   	  
+				break;
+			}
+
+			/** Operacoes:
+				incremento da variavel i
+				comparacao do laco for com variavel i
+			*/
+			qtdOperacao += 2;
 		}
-		// Uma operacao de int = 0 e uma da ultima comparacao do laco for ou break
-		qtdOperacao += 2; 
+		// Uma operacao de int = 0 
+		// uma da ultima comparacao do laco for ou break
+		// inicialização da variavel estaOrdenado
+		qtdOperacao += 3; 
 	}
 
 	@Override

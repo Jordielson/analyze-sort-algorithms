@@ -27,7 +27,7 @@ public class SelectionSort extends Ordenacao {
 			Integer aux = v[fixo];
 			v[fixo] = v[menor];
 			v[menor] = aux;
-			movimentacaoDeRegistro++;
+			movimentacaoDeRegistro+=2;
 			
 			/** Operacoes:
 			 * fixo < v.length - 1

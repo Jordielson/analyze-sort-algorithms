@@ -39,7 +39,7 @@ public class QuickSort extends Ordenacao {
 				aux = v[e];
 				v[e] = v[d];
 				v[d] = aux;
-				movimentacaoDeRegistro++;
+				movimentacaoDeRegistro+=2;
 				e++;
 				d--;
 				/** Operacoes:
